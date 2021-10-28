@@ -1,8 +1,8 @@
 import nltk
 #nltk.download('punkt')
-d1 = "Jinyang is a good guy, he is not bad"
+d1 = "ARC is a good guy, he is not bad"
 d2 = "feet wolves cooked boys girls ,!<@!"
-d3 = "Jinyang is not a good guy, he is bad"
+d3 = "ARC is not a good guy, he is bad"
 c1 = [d1, d2, d3]
 token_d1 = nltk.word_tokenize(d1)
 print(token_d1)
