@@ -1,5 +1,6 @@
 import nltk
 #nltk.download('punkt')
+#nltk.download('wordnet')
 d1 = "ARC is a good guy, he is not bad"
 d2 = "feet wolves cooked boys girls ,!<@!"
 d3 = "ARC is not a good guy, he is bad"
@@ -18,3 +19,14 @@ vectorizer1.fit(c1)
 print(vectorizer1.vocabulary_)
 v1 = vectorizer1.transform(c1)
 print(v1.toarray())
+
+
+#STEMMER - only the root of the words would remain the same
+token_d2 = nltk.word_tokenize(d2.lower())
+stemmer = nltk.stem.PorterStemmer()
+stemmered_token_d2 = [stemmer.stem(token) for token in token_d2 if token.isalpha()]
+print(token_d2)
+print(stemmered_token_d2)
+lemmatizer = nltk.stem.WordNetLemmatizer()
+lemmatized_token_d2 = [lemmatizer.lemmatize(token) for token in token_d2 if token.isalpha()]
+print(lemmatized_token_d2)
